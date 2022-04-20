@@ -10,6 +10,7 @@
       "    ret.push_back(s.substr(left, right - left));",
       "    left = right + 1;",
       "  }",
+      "  ret.push_back(s.substr(left));",
       "  return ret;",
       "}"
     ],
