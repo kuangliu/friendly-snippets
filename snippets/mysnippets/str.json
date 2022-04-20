@@ -15,8 +15,20 @@
       "}"
     ],
     "description": "String split"
+  },
+  "split2": {
+    "prefix": "split2",
+    "body": [
+      "std::vector<std::string> split(const std::string& s, const char delim) {",
+      "  std::stringstream ss(s);",
+      "  std::vector<std::string> ret;",
+      "  std::string x;",
+      "  while (std::getline(ss, x, delim)) {",
+      "    ret.push_back(x);",
+      "  }",
+      "  return ret;",
+      "}"
+    ],
+    "description": "String split"
   }
 }
-
-
-
