@@ -1,0 +1,11 @@
+{
+  "num_digits": {
+    "prefix": "num_digits",
+    "body": [
+      "inline int num_digits(const int a) {",
+      "  return static_cast<int>(std::log10(a) + 1);",
+      "}"
+    ],
+    "description": "Get number of digits of a number"
+  }
+}

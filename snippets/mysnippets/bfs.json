@@ -1,0 +1,52 @@
+{
+  "bfs": {
+    "prefix": "bfs",
+    "body": [
+      "void bfs(const std::vector<std::vector<int>>& adj, const int root) {",
+      "  std::queue<int> q;",
+      "  std::vector<int> visited(adj.size(), false);",
+      "  q.emplace(root);",
+      "  visited[root] = true;",
+      "  while (!q.empty()) {",
+      "    int u = q.front();",
+      "    visited[u] = true;",
+      "    q.pop();",
+      "    for (int v : adj[u]) {",
+      "      if (!visited[v]) {",
+      "        q.emplace(v);",
+      "      }",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "BFS"
+  },
+
+  "bfs_depth": {
+    "prefix": "bfs_depth",
+    "body": [
+      "int bfs_depth(const std::vector<std::vector<int>>& adj, const int root) {",
+      "  std::vector<bool> visited(adj.size(), false);",
+      "  std::queue<int> q;",
+      "  q.emplace(root);",
+      "  int depth = 0;",
+      "  while (!q.empty()) {",
+      "    int level_size = q.size();",
+      "    while (level_size-- != 0) {",
+      "      int u = q.front();",
+      "      visited[u] = true;",
+      "      q.pop();",
+      "      for (int v : adj[u]) {",
+      "        if (!visited[v]) {",
+      "          q.emplace(v);",
+      "        }",
+      "      }",
+      "    }",
+      "    ++depth;",
+      "  }",
+      "  return depth;",
+      "}"
+    ],
+    "description": "BFS"
+  }
+}

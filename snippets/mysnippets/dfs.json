@@ -1,0 +1,41 @@
+{
+  "dfs": {
+    "prefix": "dfs",
+    "body": [
+      "void dfs(const std::vector<std::vector<int>>& adj, const int root) {",
+      "  std::stack<int> s;",
+      "  std::vector<int> visited(adj.size(), false);",
+      "  s.emplace(root);",
+      "  visited[root] = true;",
+      "  while (!s.empty()) {",
+      "    int u = s.top();",
+      "    visited[u] = true;",
+      "    s.pop();",
+      "    for (int v : adj[u]) {",
+      "      if (!visited[v]) {",
+      "        s.emplace(v);",
+      "      }",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "DFS"
+  },
+
+  "dfs2": {
+    "prefix": "dfs2",
+    "body": [
+      "void dfs2(const std::vector<std::vector<int>>& adj,",
+      "          const int root,",
+      "          std::vector<int>& visited) {",
+      "  visited[root] = true;",
+      "  for (int v : adj[root]) {",
+      "    if (!visited[v]) {",
+      "      dfs2(adj, v, visited);",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "DFS"
+  }
+}
