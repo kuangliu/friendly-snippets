@@ -69,6 +69,10 @@
       {
         "language": "cpp",
         "path": "./snippets/mysnippets/str.json"
+      },
+      {
+        "language": "cmake",
+        "path": "./snippets/mysnippets/cmake.json"
       }
     ]
   }
