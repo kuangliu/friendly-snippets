@@ -30,5 +30,19 @@
       "}"
     ],
     "description": "String split"
+  },
+  "to_binary": {
+    "prefix": "to_binary",
+    "body": [
+      "std::string to_binary(int a) {",
+      "  std::string s;",
+      "  while (a != 0) {",
+      "    s = (a % 2 == 0 ? '0' : '1') + s;",
+      "    a /= 2;",
+      "  }",
+      "  return s;",
+      "}"
+    ],
+    "description": "Convert int to binary"
   }
 }
