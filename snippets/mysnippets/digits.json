@@ -7,5 +7,19 @@
       "}"
     ],
     "description": "Get number of digits of a number"
+  },
+  "to_digits": {
+    "prefix": "to_digits",
+    "body": [
+      "std::deque<int> to_digits(int a) {",
+      "  std::deque<int> ret;",
+      "  while (a != 0) {",
+      "    ret.push_front(a % 10);",
+      "    a /= 10;",
+      "  }",
+      "  return ret;",
+      "}"
+    ],
+    "description": "Convert number to digits"
   }
 }
